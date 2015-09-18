@@ -50,7 +50,6 @@ class Game
     count = 0
     start_time = Time.now
     win = false
-    file = []
     cheat_status = false
     while count < 12 
       cheat_status = false
@@ -78,11 +77,11 @@ class Game
       incorrect_entries = players_try.length - match.length - partial.length
       if match == comp_code && players_try.length == level_hash[level]
         elapsed_time = Time.now - start_time
-        puts "Congratulations!! #{name} you broke the code after #{count} chance(s) in #{elapsed_time} secs".yellow
+        puts "Congratulations!! you broke the code after #{count} chance(s) in #{elapsed_time} secs".yellow
         win = true
         puts "Enter your name".green
         name = Player.name
-        Write.writer(name, elapsed_time)
+        Write.writer(name, elapsed_time,level)
         break
       end
       if cheat_status == false
@@ -97,7 +96,7 @@ class Game
   end
 
   def self.game_decision
-    puts "Would you like to play again or check top score? Enter p to play q to quit"
+    puts "Would you like to play again? Enter p to play q to quit"
     players_decision = ''
     while players_decision != ""
       if players_decision == "P"

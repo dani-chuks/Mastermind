@@ -7,11 +7,11 @@ class Message
 		@game = Game.new
 	end
 	def self.choose_level
-		puts"I have created the game to be played at three different levels. level 1 for beginner, 2 for intermediate and 3 for Advanced level"
+		puts"I have created the game to be played at three different levels. level 1 for \nbeginner, 2 for intermediate and 3 for Advanced level. \nStart by choosing the level you would like to play"
 		puts "Enter your level".green
 	end
 	def self.introductory_message
-		puts "Welcome to MASTERMIND Would you like to (p)lay, read the (i)nstructions, or (q)uit?".green
+		puts "Welcome to MASTERMIND. A game which test how well you can break a code which \nrepresents a sequence of the first letters of colors. Would you like to play?\n Hit  to p (p)lay,i to read the (i)nstructions, or (q)uit?".green
 	end
 
 	def  self.game_instruction
@@ -19,7 +19,7 @@ class Message
 	end
 
 	def self.game_beginner
-		puts "I have generated a beginner sequence with four elements made up of: #{"(r)ed".red},#{"(g)reen".green}, #{"(b)lue".blue}, and #{"(y)ellow".yellow}. Use (q)uit at any time to end the game"
+		puts "A sequence has been generated with four elements made up of: #{"(r)ed".red},\n#{"(g)reen".green}, #{"(b)lue".blue}, and #{"(y)ellow".yellow}.\n Use (q)uit at any time to end the game"
 	end
 
 	def self.in_game_feedback
@@ -35,6 +35,6 @@ class Message
 	end
 
 	def self.advanced
-		puts "You have selected intermediate level. You are provided with six colors #{'(y)ellow'.yellow}, #{'(r)ed'.red}, #{'(b)lue'.blue}, #{'(g)reen'.green}, #{'(m)agenta'.magenta} and white.You are expected to guess a sequence of five letters where each letter can be  from any of the six colours given"
+		puts "You have selected intermediate level. You are provided with six colors\n #{'(y)ellow'.yellow}, #{'(r)ed'.red}, #{'(b)lue'.blue}, #{'(g)reen'.green}, #{'(m)agenta'.magenta} and white.You are expected to guess a sequence of five letters where each letter can be  from any of the six colours given"
 	end
 end
